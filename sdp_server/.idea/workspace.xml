@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c4ad09a-ec2f-4e52-ae1f-fbf3fc065de1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../conference_server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/static/image/first.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/static/image/second.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/templates/meeting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/templates/statistics.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/meeting_call/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/video_app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/video_app/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/video_app/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/video_app/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conference_server/video_app/video_app/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../conference_server/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../conference_server/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/frontend/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../conference_server/video_app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/meeting_call/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/meeting_call/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/meeting_call/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/meeting_call/static/image/first.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/meeting_call/static/image/second.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/meeting_call/static/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/meeting_call/templates/meeting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/meeting_call/templates/statistics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/video_app/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/video_app/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/video_app/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/video_app/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_app/video_app/wsgi.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2Lh6h9fc53m04UkujYw07ji79dZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/video-meeting-app"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c4ad09a-ec2f-4e52-ae1f-fbf3fc065de1" name="Changes" comment="" />
+      <created>1676311083718</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676311083718</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

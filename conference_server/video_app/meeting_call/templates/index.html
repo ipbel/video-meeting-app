@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'js/bootstrap.min.js' %}" type="text/css">
+</head>
+<body>
+<form>
+  <div class="form-group">
+      <label>Username:</label>
+      <input type="text" class="form-control" placeholder="Enter your username">
+      <label>Room:</label>
+      <input type="text" class="form-control" placeholder="Enter your room ID">
+  </div>
+  <div>
+      <button type="submit">Join room</button>
+  </div>
+</form>
+</body>
+</html>
