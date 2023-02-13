@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>second page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'js/bootstrap.min.js' %}" type="text/css">
+</head>
+<body>
+    <h1>ЗДЕСЬ ДОЛЖНЫ ВЫВОДИТЬСЯ КАРТИНКА С 2Х КАМЕР</h1>
+    <div class="container-fluid">
+<!--почему-то тут не грузит картинку через { static image/first.jpg }
+СПРОСИТЬ ПРО { static image/chto-to-tam.png } - почему не загружается так картинка, а стили boostrap загружаются?
+-->
+<!--        <img src="static/image/first.jpg" class="rounded float-start" alt="...">-->
+<!--        <img src="static/image/second.jpeg" class="rounded float-end" alt="...">-->
+        <a href="statistics">NEXT PAGE</a>
+    </div>
+</body>
+</html>

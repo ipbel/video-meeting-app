@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "sdp-server"
+version = "0.1.0"
+description = ""
+authors = ["donil <donil@DESKTOP-EV66SOA.(none)>"]
+readme = "README.md"
+packages = [{include = "sdp_server"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
