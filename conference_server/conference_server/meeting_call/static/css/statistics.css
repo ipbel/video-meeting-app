@@ -104,12 +104,11 @@ label.review{
   transition:opacity .25s;
 }
 
-
-
 input.star:checked ~ .rev-box{
   height: 125px;
   overflow: visible;
 }
+
 
 
 

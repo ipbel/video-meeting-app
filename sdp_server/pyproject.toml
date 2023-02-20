@@ -7,9 +7,10 @@ readme = "README.md"
 packages = [{include = "sdp_server"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.8"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
