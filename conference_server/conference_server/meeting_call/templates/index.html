@@ -5,19 +5,39 @@
     <title>Home</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'js/bootstrap.min.js' %}" type="text/css">
 </head>
 <body>
-<form>
-  <div class="form-group">
-      <label>Username:</label>
-      <input type="text" class="form-control" placeholder="Enter your username">
-      <label>Room:</label>
-      <input type="text" class="form-control" placeholder="Enter your room ID">
-  </div>
-  <div>
-      <button type="submit">Join room</button>
-  </div>
-</form>
+<div class="form-center">
+    <form class="meeting_form">
+        <div class="content">
+            <div>
+                <label>Login:</label>
+                <input type="text" class="form-control" placeholder="Enter your login"
+                       aria-describedby="input-group-button-right">
+            </div>
+            <p class="line"><span>AND</span></p>
+            <div class="roomID">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Meeting ID" aria-label="Username"
+                           aria-describedby="input-group-button-right">
+                    <button type="button" class="btn btn-outline-secondary" id="input-group-button-right">Join Meeting
+                    </button>
+                </div>
+                <p>OR</p>
+                <div class="input-group">
+                    <button type="button" class="btn btn-outline-secondary" id="input-group-button-left">Create meeting
+                        room
+                    </button>
+                    <input type="text" class="form-control" placeholder="Create ID for room" aria-label="Username"
+                           aria-describedby="input-group-button-left">
+                </div>
+            </div>
+            <a href="meeting">next page</a>
+        </div>
+    </form>
+</div>
+
 </body>
 </html>
