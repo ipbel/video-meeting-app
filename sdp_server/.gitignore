@@ -7,7 +7,7 @@ __pycache__/
 # C extensions
 *.so
 
-#dbsqlite3
+#database
 *.sqlite3
 
 # Distribution / packaging
