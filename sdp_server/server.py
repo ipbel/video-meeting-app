@@ -6,12 +6,9 @@ import os
 import ssl
 import uuid
 
-import cv2
 from aiohttp import web
-from av import VideoFrame
-
 from aiortc import MediaStreamTrack, RTCPeerConnection, RTCSessionDescription
-from aiortc.contrib.media import MediaBlackhole, MediaPlayer, MediaRecorder, MediaRelay
+from aiortc.contrib.media import MediaBlackhole, MediaRecorder, MediaRelay
 
 ROOT = os.path.dirname(__file__)
 
@@ -140,7 +137,7 @@ if __name__ == "__main__":
 
     app = web.Application()
     app.on_shutdown.append(on_shutdown)
-    app.router.add_get("/offer", offer)
+    app.router.add_post("/offer", offer)
     web.run_app(
         app, access_log=None, host=args.host, port=args.port, ssl_context=ssl_context
     )
