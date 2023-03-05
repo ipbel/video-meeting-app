@@ -15,16 +15,17 @@
         <div class="content">
             <div>
                 <label>Login:</label>
-<!--     ##############################input с логином-->
+                <!--     ##############################input с логином-->
                 {{ form.user }}
             </div>
             <p class="line"><span>AND</span></p>
             <div class="roomID">
                 <div class="input-group">
                     <!--     ##############################input с входом в комнату-->
-                    <input type="text" class="form-control" placeholder="Meeting ID" aria-label="Username"
+                    <input type="text" id="username" class="form-control" placeholder="Meeting ID" aria-label="Username"
                            aria-describedby="input-group-button-right">
-                    <button type="button" class="btn btn-outline-secondary" id="input-group-button-right">Join Meeting
+                    <button type="button" class="btn btn-outline-secondary"
+                            id="input-group-button-right connectButton" onclick='connect()'>Join Meeting
                     </button>
                 </div>
                 <p>OR</p>
@@ -41,6 +42,23 @@
         <span>{{ error }}</span>
     </form>
 </div>
+<!--<script>-->
+<!--    const userInput = document.getElementById('username')-->
 
+<!--    function connect() {-->
+<!--    username = userInput.value-->
+<!--    if (username === '') {-->
+<!--        alert('Your name is empty!')-->
+<!--        return;-->
+<!--    }-->
+<!--    conn = new WebSocket('wss://127.0.0.1:8080')-->
+<!--    conn.addEventListener('open', (e) => {-->
+<!--        console.log("Connected to the signaling server");-->
+<!--        initialize(username);-->
+<!--    })-->
+<!--    conn.addEventListener('message', onmessage)-->
+<!--}-->
+
+<!--</script>-->
 </body>
 </html>

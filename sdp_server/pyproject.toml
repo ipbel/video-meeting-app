@@ -4,12 +4,14 @@ version = "0.1.0"
 description = ""
 authors = ["donil <donil@DESKTOP-EV66SOA.(none)>"]
 readme = "README.md"
-packages = [{include = "sdp_server"}]
+packages = [{ include = "sdp_server" }]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 aiohttp = "^3.8.4"
 aiortc = "^1.4.0"
+channels = "^4.0.0"
+asgiref = ">=3.5.0,<4"
 
 
 [build-system]

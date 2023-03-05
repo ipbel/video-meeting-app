@@ -13,9 +13,8 @@ def index(request):
         form = RoomInfoForm(request.POST)
         if form.is_valid():
             form.save()
-            user_url = form.cleaned_data.get('user')
             room_url = form.cleaned_data.get('call_id')
-            return HttpResponseRedirect(f'meeting/user-id:{user_url}/room-id:{room_url}/')
+            return HttpResponseRedirect(f'meeting/{room_url}')
         else:
             return error
 
@@ -37,7 +36,7 @@ def sdpconnection(request):
     return HttpResponse('')
 
 
-def get_room_meeting(request, user_url, room_url):
+def get_room_meeting(request, room_url):
     return render(request, 'meeting.html', {})
     # content = open("meeting.html", "r").read()
     # return web.Response(content_type="text/html", text=content)
