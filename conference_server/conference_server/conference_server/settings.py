@@ -51,12 +51,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'conference_server.urls'
 
-CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels.layers.InMemoryChannelLayer"
-    }
-}
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
