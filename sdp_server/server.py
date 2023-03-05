@@ -9,7 +9,6 @@ import asyncio
 from aiohttp import web
 from aiortc import MediaStreamTrack, RTCPeerConnection, RTCSessionDescription
 from aiortc.contrib.media import MediaBlackhole, MediaRecorder, MediaRelay
-from channels.generic.websocket import WebsocketConsumer, AsyncWebsocketConsumer
 
 ROOT = os.path.dirname(__file__)
 
