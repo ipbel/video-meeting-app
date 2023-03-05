@@ -40,7 +40,7 @@ function createPeerConnection() {
     // connect audio / video
     pc.addEventListener('track', function(evt) {
         if (evt.track.kind == 'video')
-            document.getElementById('localVideo').srcObject = evt.streams[0];
+                document.getElementById('localVideo').srcObject = evt.streams[0];
         else
             document.getElementById('audio').srcObject = evt.streams[0];
     });
