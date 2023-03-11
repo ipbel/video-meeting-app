@@ -33,32 +33,8 @@ class VideoTransformTrack(MediaStreamTrack):
 
     async def recv(self):
         frame = await self.track.recv()
+        doc =
         return frame
-
-
-def create_local_tracks(play_from):
-    global webcam
-
-    if play_from:
-        player = MediaPlayer(play_from)
-        return player.audio, player.video
-
-
-def force_codec(pc, sender, forced_codec):
-    kind = forced_codec.split('/')[0]
-    codecs = RTCRtpSender.getCapabilities(kind).codecs
-    transceiver = next(t for t in pc.getTransceivers() if t.sender == sender)
-    transceiver.setCodecPrefernces(
-        [codec for codec in codecs if codec.mimeType == forced_codec]
-    )
-
-
-async def index(request):
-    data = {'Status': 'OK'}
-    return web.Response(
-        content_type='application/json',
-        text=json.dumps(data),
-    )
 
 
 async def offer(request):
@@ -69,7 +45,7 @@ async def offer(request):
     pc_id = "PeerConnection(%s)" % uuid.uuid4()
     pcs.add(pc)
 
-    click.echo(f'RTCPeerConnection created for123132 {pc_id} from {request.remote}')
+    click.echo(f'RTCPeerConnection created for {pc_id} from {request.remote}')
 
     def log_info(msg, *args):
         logger.info(pc_id + " " + msg, *args)
