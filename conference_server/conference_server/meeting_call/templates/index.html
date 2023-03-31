@@ -10,34 +10,37 @@
 </head>
 <body>
 <div class="form-center">
-    <form class="meeting_form">
+    <form class="meeting_form" method="post">
+        {% csrf_token %}
         <div class="content">
             <div>
                 <label>Login:</label>
-                <input type="text" class="form-control" placeholder="Enter your login"
-                       aria-describedby="input-group-button-right">
+                <!--     ##############################input с логином-->
+                {{ form.user }}
             </div>
             <p class="line"><span>AND</span></p>
             <div class="roomID">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Meeting ID" aria-label="Username"
+                    <!--     ##############################input с входом в комнату-->
+                    <input type="text" id="username" class="form-control" placeholder="Meeting ID" aria-label="Username"
                            aria-describedby="input-group-button-right">
-                    <button type="button" class="btn btn-outline-secondary" id="input-group-button-right">Join Meeting
+                    <button type="button" class="btn btn-outline-secondary"
+                            id="input-group-button-right connectButton" onclick='connect()'>Join Meeting
                     </button>
                 </div>
                 <p>OR</p>
                 <div class="input-group">
-                    <button type="button" class="btn btn-outline-secondary" id="input-group-button-left">Create meeting
+                    <!--     ##############################input с созданием комнаты-->
+                    <button type="submit" class="btn btn-outline-secondary" id="input-group-button-left">Create meeting
                         room
                     </button>
-                    <input type="text" class="form-control" placeholder="Create ID for room" aria-label="Username"
-                           aria-describedby="input-group-button-left">
+                    {{ form.call_id }}
                 </div>
             </div>
             <a href="meeting">next page</a>
         </div>
+        <span>{{ error }}</span>
     </form>
 </div>
-
 </body>
 </html>

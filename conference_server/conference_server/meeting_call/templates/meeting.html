@@ -1,21 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>second page</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Second page</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'js/bootstrap.min.js' %}" type="text/css">
+    <!--почему-то тут не грузит картинку через { static image/first.jpg }
+    СПРОСИТЬ ПРО { static image/chto-to-tam.png } - почему не загружается так картинка, а стили boostrap загружаются?
+    -->
+    <style>
+    body {
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      padding: 0 50px;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    video {
+      max-width: calc(50% - 100px);
+      margin: 0 50px;
+      box-sizing: border-box;
+      border-radius: 2px;
+      padding: 0;
+      box-shadow: rgba(156, 172, 172, 0.2) 0px 2px 2px, rgba(156, 172, 172, 0.2) 0px 4px 4px, rgba(156, 172, 172, 0.2) 0px 8px 8px, rgba(156, 172, 172, 0.2) 0px 16px 16px, rgba(156, 172, 172, 0.2) 0px 32px 32px, rgba(156, 172, 172, 0.2) 0px 64px 64px;
+    }
+    .copy {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    </style>
+    <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
 </head>
 <body>
-    <h1>ЗДЕСЬ ДОЛЖНЫ ВЫВОДИТЬСЯ КАРТИНКА С 2Х КАМЕР</h1>
-    <div class="container-fluid">
-<!--почему-то тут не грузит картинку через { static image/first.jpg }
-СПРОСИТЬ ПРО { static image/chto-to-tam.png } - почему не загружается так картинка, а стили boostrap загружаются?
--->
-<!--        <img src="static/image/first.jpg" class="rounded float-start" alt="...">-->
-<!--        <img src="static/image/second.jpeg" class="rounded float-end" alt="...">-->
-        <a href="statistics">NEXT PAGE</a>
-    </div>
+
+
+  <video id="localVideo" autoplay muted></video>
+  <video id="remoteVideo" autoplay></video>
+
+
+<!--<h2>Options</h2>-->
+<!--<div class="option">-->
+<!--    <input id="use-datachannel" checked="checked" type="checkbox"/>-->
+<!--    <label for="use-datachannel">Use datachannel</label>-->
+<!--    <select id="datachannel-parameters">-->
+<!--        <option value='{"ordered": true}'>Ordered, reliable</option>-->
+<!--        <option value='{"ordered": false, "maxRetransmits": 0}'>Unordered, no retransmissions</option>-->
+<!--        <option value='{"ordered": false, "maxPacketLifetime": 500}'>Unordered, 500ms lifetime</option>-->
+<!--    </select>-->
+<!--</div>-->
+<!--<div class="option">-->
+<!--    <input id="use-audio" checked="checked" type="checkbox"/>-->
+<!--    <label for="use-audio">Use audio</label>-->
+<!--    <select id="audio-codec">-->
+<!--        <option value="default" selected>Default codecs</option>-->
+<!--        <option value="opus/48000/2">Opus</option>-->
+<!--        <option value="PCMU/8000">PCMU</option>-->
+<!--        <option value="PCMA/8000">PCMA</option>-->
+<!--    </select>-->
+<!--</div>-->
+<!--<div class="option">-->
+<!--    <input id="use-video" type="checkbox"/>-->
+<!--    <label for="use-video">Use video</label>-->
+<!--    <select id="video-resolution">-->
+<!--        <option value="" selected>Default resolution</option>-->
+<!--        <option value="320x240">320x240</option>-->
+<!--        <option value="640x480">640x480</option>-->
+<!--        <option value="960x540">960x540</option>-->
+<!--        <option value="1280x720">1280x720</option>-->
+<!--    </select>-->
+<!--    <select id="video-codec">-->
+<!--        <option value="default" selected>Default codecs</option>-->
+<!--        <option value="VP8/90000">VP8</option>-->
+<!--        <option value="H264/90000">H264</option>-->
+<!--    </select>-->
+<!--</div>-->
+<!--<div class="option">-->
+<!--    <input id="use-stun" type="checkbox"/>-->
+<!--    <label for="use-stun">Use STUN server</label>-->
+<!--</div>-->
+<!--<button id="start" onclick="start()">Start</button>-->
+<!--<button id="stop" style="display: none" onclick="stop()">Stop</button>-->
+
+<!--<video id="localVideo" width="1280" height="500"  autoplay="true"></video>-->
+<!--<video id="remoteVideo" width="1280" height="500"  autoplay="true"></video>-->
+<!--<h2>State</h2>-->
+<!--<p>-->
+<!--    ICE gathering state: <span id="ice-gathering-state"></span>-->
+<!--</p>-->
+<!--<p>-->
+<!--    ICE connection state: <span id="ice-connection-state"></span>-->
+<!--</p>-->
+<!--<p>-->
+<!--    Signaling state: <span id="signaling-state"></span>-->
+<!--</p>-->
+
+<!--<div id="media" style="display: none">-->
+<!--    <h2>Media</h2>-->
+
+<!--    <audio id="audio" autoplay="true"></audio>-->
+<!--&lt;!&ndash;    <video id="localVideo" autoplay="true" playsinline="true"></video>&ndash;&gt;-->
+<!--&lt;!&ndash;    <video id="remoteVideo" autoplay="true" playsinline="true"></video>&ndash;&gt;-->
+<!--</div>-->
+
+<!--<h2>Data channel</h2>-->
+<!--<pre id="data-channel" style="height: 200px;"></pre>-->
+
+<!--<h2>SDP</h2>-->
+
+<!--<h3>Offer</h3>-->
+<!--<pre id="offer-sdp"></pre>-->
+
+<!--<h3>Answer</h3>-->
+<!--<pre id="answer-sdp"></pre>-->
+
+<script src="{% static 'js/server_offer.js' %}"></script>
 </body>
 </html>
